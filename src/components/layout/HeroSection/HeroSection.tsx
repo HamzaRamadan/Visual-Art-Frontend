@@ -17,7 +17,7 @@ const HeroSection: React.FC = () => {
     >
       <div className="hero-background">
         <video autoPlay muted loop playsInline>
-          <source src="/assets/videos/hero.mp4" type="video/mp4" />
+          <source src="/assets/hero.mp4" type="video/mp4" />
         </video>
       </div>
     </section>
