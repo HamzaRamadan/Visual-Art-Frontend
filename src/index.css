@@ -1,0 +1,15 @@
+@import '../public/assets/styles/variables.css';
+@import '../public/assets//styles/global.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}

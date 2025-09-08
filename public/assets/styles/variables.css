@@ -1,0 +1,43 @@
+:root {
+  /* الألوان */
+  --primary-color: #0a4d8c;
+  --secondary-color: #ff6b00;
+  --accent-color: #00a8cc;
+  --text-color: #333;
+  --light-text: #666;
+  --background-color: #f8f9fa;
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #e0e0e0;
+  --light-gray: #f5f5f5;
+  --dark-gray: #777;
+  
+  /* التأثيرات */
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --border-radius: 8px;
+  
+  /* الأبعاد */
+  --max-width: 1200px;
+  --padding: 20px;
+  --margin: 20px;
+}
+
+/* دعم RTL */
+[dir="rtl"] {
+  --text-align-right: right;
+  --text-align-left: left;
+  --margin-right: var(--margin);
+  --margin-left: var(--margin);
+  --padding-right: var(--padding);
+  --padding-left: var(--padding);
+}
+
+[dir="ltr"] {
+  --text-align-right: left;
+  --text-align-left: right;
+  --margin-right: var(--margin);
+  --margin-left: var(--margin);
+  --padding-right: var(--padding);
+  --padding-left: var(--padding);
+}

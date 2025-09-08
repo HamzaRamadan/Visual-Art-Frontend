@@ -1,0 +1,9 @@
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+
+.swiper {
+  width: 100%;
+}
+.swiper-slide {
+  height: auto;
+}
