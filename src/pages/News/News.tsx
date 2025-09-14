@@ -139,20 +139,43 @@ const News = () => {
         </div>
       </div>
 
-      <div className="news-cards">
-        {newsCards.map((news) => (
-          <div className="news-card" key={news._id || news.id}>
-            <img src={news.image} alt={isRTL ? news.titleAr : news.titleEn} />
-            <div className="news-card-content">
-              <h3>{isRTL ? news.titleAr : news.titleEn}</h3>
-              <p>{isRTL ? news.descriptionAr : news.descriptionEn}</p>
-              <span className="news-card-date">
-                {new Date(news.date).toLocaleDateString()}
-              </span>
-            </div>
-          </div>
-        ))}
-      </div>
+       <div className="news-cards flex flex-wrap gap-6 justify-start">
+  {newsCards.map((news) => (
+    <div
+      key={news._id || news.id}
+      className="news-card bg-white shadow-md rounded-xl p-4 flex flex-col"
+      style={{ width: '400px' }} // تحديد عرض ثابت للكارت
+    >
+      {/* الصورة */}
+      {news.image && (
+        <img
+          src={news.image}
+          alt={isRTL ? news.titleAr : news.titleEn}
+          className="h-48 object-cover rounded-md mb-3"
+          style={{ width: '100%' }} // تم تعديلها لتتناسب مع الكارت فقط
+        />
+      )}
+
+      {/* العنوان */}
+      <h3 className="font-bold text-lg mb-2">
+        {isRTL ? news.titleAr : news.titleEn}
+      </h3>
+
+      {/* الوصف */}
+      <p className="text-gray-700 text-sm line-clamp-3 mb-4">
+        {isRTL ? news.descriptionAr : news.descriptionEn}
+      </p>
+
+      {/* التاريخ */}
+      <span className="text-gray-500 text-xs mb-4">
+        {new Date(news.date).toLocaleDateString(isRTL ? "ar-EG" : "en-US")}
+      </span>
+
+      
+    </div>
+  ))}
+</div>
+
     </div>
   );
 };
